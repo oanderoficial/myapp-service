@@ -1,6 +1,8 @@
 # myapp-service
 <strong> Atividade 2 - Treinamento Trilha Orquestração de Containers  </strong>
 <br>
+<strong> link: https://academy.o2b.com.br/courses/trilha-orquestracao-de-conteiners-t-systems </strong>
+<br>
 
 Implantando aplicativo criado com Dockerfile.
 
