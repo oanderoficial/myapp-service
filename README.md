@@ -1,4 +1,7 @@
 # myapp-service
+<strong> Atividade 2 - Treinamento Trilha Orquestração de Containers  </strong>
+<br>
+
 Implantando aplicativo criado com Dockerfile.
 
 <strong> Objetivos: </strong> 
@@ -30,4 +33,58 @@ Implantando aplicativo criado com Dockerfile.
 
 
 # Implantação: 
+
+<strong> Passo 1: Criando o HTML </strong>
+  - Crie um diretório para a aplicação:
+```bash
+mkdir myapp
+cd myapp
+```
+ - Dentro desse diretório, crie um arquivo index.html
+ - Exemplo:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Kubernetes?</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1 { color: #2c3e50; }
+        p { color: #34495e; }
+    </style>
+</head>
+<body>
+    <h1>What is Kubernetes?</h1>
+    <p>Kubernetes is an open-source container orchestration platform that automates many of the manual processes involved in deploying, managing, and scaling containerized applications. It groups containers that make up an application into logical units for easy management and discovery. Originally developed by Google, Kubernetes is now maintained by the Cloud Native Computing Foundation (CNCF).</p>
+</body>
+</html>
+```
+
+<strong> Passo 2: Crie a imagem Docker </strong> 
+
+ - Crie um Dockerfile no mesmo diretório:
+
+```Dockerfile
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
+```
+
+ - Construa a imagem Docker:
+
+```bash
+docker build -t myk8sapp:latest .
+```
+
+- Faça o upload da imagem para um registro de contêiner, como Docker Hub:
+
+```bash
+docker tag myk8sapp:latest yourusername/myk8sapp:latest
+docker push yourusername/myk8sapp:latest
+```
+
+<strong> Passo 3: Criando o Deployment </strong> 
+
+ - Crie um arquivo chamado myapp-deployment.yaml
 
