@@ -48,6 +48,10 @@ cd /infrabank
 
 ```Dockerfile
 FROM nginx:alpine
+
+# Autor
+LABEL author="Anderson B Silva <andersoncomercial@pm.me>"
+
 COPY . /usr/share/nginx/html
 ```
 
