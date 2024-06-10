@@ -6,7 +6,7 @@ Implantando aplicativo criado com Dockerfile.
 
 <strong> Objetivos: </strong> 
 
- - Criar um Deployment para a aplicação que foi criada no treinamento de Docker chamada webserver10.
+ - Criar um Deployment para a aplicação que foi criada no treinamento de Docker chamada myk8sapp.
  - Expor a aplicação através de um Service.
 
 # Passos:
