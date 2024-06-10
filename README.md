@@ -28,7 +28,7 @@ Implantando aplicativo criado com Dockerfile.
 
 <strong> 3 Implante a Aplicação: </strong>
 
- - Aplique os arquivos YAML na ordem:Deployment e Service.
+ - Aplique os arquivos YAML na ordem: Deployment e Service.
  - Verifique se a aplicação está em execução corretamente.
 
 
