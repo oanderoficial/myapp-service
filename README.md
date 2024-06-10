@@ -88,3 +88,47 @@ docker push yourusername/myk8sapp:latest
 
  - Crie um arquivo chamado myapp-deployment.yaml
 
+```yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+  labels:
+    app: myapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myk8sapp
+        image: yourusername/myk8sapp:latest
+        ports:
+        - containerPort: 80
+```
+
+<strong> Passo 4: Criando o Service </strong> 
+
+ - Crie um arquivo chamado myapp-service.yaml
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+spec:
+  selector:
+    app: myapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+```
+
+
