@@ -77,6 +77,8 @@ COPY . /usr/share/nginx/html
 docker build -t myk8sapp:latest .
 ```
 
+![image](https://github.com/oanderoficial/myapp-service/assets/32654298/485f93d2-e24f-4f60-90f1-250815a24a3a)
+
 - Faça o upload da imagem para um registro de contêiner, como Docker Hub:
 
 ```bash
@@ -147,6 +149,8 @@ kubectl get deployments
 kubectl get pods
 kubectl get services
 ```
+![image](https://github.com/oanderoficial/myapp-service/assets/32654298/59dec23d-bde4-43bc-8532-e7e3b6fbb7ba)
+
 
 <strong>  Start com o Minikube </strong> 
 
@@ -155,4 +159,14 @@ kubectl get services
 ```bash
 minikube service myapp-service
 ```
+<strong> Bind de portas </strong> 
+
+```
+kubectl port-forward svc/myapp-service 8080:80 --address='0.0.0.0'
+```
+![image](https://github.com/oanderoficial/myapp-service/assets/32654298/99e9f68d-3270-4243-b843-b6bdd43a2bb4)
+
+# Saída 
+
+![image](https://github.com/oanderoficial/myapp-service/assets/32654298/a1761d06-5b9b-46f8-a6c2-910fe426451e)
 
