@@ -151,7 +151,7 @@ kubectl port-forward svc/myapp-service 8080:80 --address='0.0.0.0'
 ![image](https://github.com/oanderoficial/myapp-service/assets/32654298/0fdfa793-4b8c-421f-8904-0713504fb8b2)
 
 
-<strong> DockerHub Teste: </strong>
+<strong> DockerHub container de exemplo: </strong>
 
 ```bash
 docker pull oandersonbsilva/nginx:latest
