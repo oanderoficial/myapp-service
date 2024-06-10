@@ -131,4 +131,28 @@ spec:
       targetPort: 80
 ```
 
+<strong> Passo 5: Implante a Aplicação </strong> 
+
+- Aplique o Deployment:
+```bash
+kubectl apply -f myapp-deployment.yaml
+```
+- Aplique o Service:
+```bash
+kubectl apply -f myapp-service.yaml
+```
+- Verifique se a aplicação está em execução corretamente:
+```bash
+kubectl get deployments
+kubectl get pods
+kubectl get services
+```
+
+<strong>  Start com o Minikube </strong> 
+
+<p>Se você estiver usando Minikube, você pode expor o serviço com o comando minikube service:</p>
+
+```bash
+minikube service myapp-service
+```
 
