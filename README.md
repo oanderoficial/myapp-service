@@ -34,34 +34,12 @@ Implantando aplicativo criado com Dockerfile.
 
 # Implantação: 
 
-<strong> Passo 1: Criando o HTML </strong>
-  - Crie um diretório para a aplicação:
+<strong> Passo 1: Download da aplicação HTML CSS e JS </strong>
+  - GitHub:
 ```bash
-mkdir myapp
-cd myapp
+git clone https://github.com/oanderoficial/infrabank.git
+cd /infrabank
 ```
- - Dentro desse diretório, crie um arquivo index.html
- - Exemplo:
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What is Kubernetes?</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        h1 { color: #2c3e50; }
-        p { color: #34495e; }
-    </style>
-</head>
-<body>
-    <h1>What is Kubernetes?</h1>
-    <p>Kubernetes is an open-source container orchestration platform that automates many of the manual processes involved in deploying, managing, and scaling containerized applications. It groups containers that make up an application into logical units for easy management and discovery. Originally developed by Google, Kubernetes is now maintained by the Cloud Native Computing Foundation (CNCF).</p>
-</body>
-</html>
-```
-
 <strong> Passo 2: Crie a imagem Docker </strong> 
 
  - Crie um Dockerfile no mesmo diretório:
@@ -168,5 +146,7 @@ kubectl port-forward svc/myapp-service 8080:80 --address='0.0.0.0'
 
 # Saída 
 
-![image](https://github.com/oanderoficial/myapp-service/assets/32654298/a1761d06-5b9b-46f8-a6c2-910fe426451e)
+![image](https://github.com/oanderoficial/myapp-service/assets/32654298/0fdfa793-4b8c-421f-8904-0713504fb8b2)
+
+
 
